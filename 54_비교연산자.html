@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비교연산자</title>
+</head>
+<body>
+    <script>
+        // 비교연산자 : > , >= , < , <= , ==()===) , !=(!==)
+        // 비교연산의 결가는 true 또는 false임
+        // 크다 = 초과, 그 값이 포함 되지 않는 것
+        // 작다 = 미만, 그 값이 포함 되지 않는 것
+        // 크거나 같다 = 이상, 그 값이 포함 되는 것
+        // 작거나 같다 = 이하, 그 값이 포함 되는 것
+        let number1 = 10;
+        let number2 = 20;
+        let number3 = "10";
+        let result;
+        result = number1 > number2;
+        document.write(result + "<br>"); //false
+        result = number1 >= number2;
+        document.write(result + "<br>"); // false
+        result = number1 < number2;
+        document.write(result + "<br>"); //true
+        result = number1 <= number2;
+        document.write(result + "<br>"); //true
+        result = number1 == number2;
+        document.write(result + "<br>");  //false
+        result = number1 != number2;
+        document.write(result + "<br>");// true
+        result = number1 == number3;
+        document.write(result + "<br>");
+        result = number1 === number3;
+        document.write(result + "<br>");
+        result = number1 != number3;
+        document.write(result + "<br>"); //false
+        result = number1 !== number3;
+        document.write(result = "<br>");
+
+        document.write(typeof number3 + "<br>"); //string
+        document.write(typeof number1 + "<br>"); //number
+        document.write(typeof result + "<br>"); //boolean
+
+    </script>
+</body>
+</html>

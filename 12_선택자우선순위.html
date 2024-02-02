@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            color: red;
+            font-size: 16px;
+        }
+        /*id 우선순위가 더 높음*/
+        #first{
+            color: blue;
+            font-size: 16px;
+        }
+        /* id가 우선순위가 더 높아서 class 명이 있어도 id가 우선임*/
+        .second{
+            color: green;
+            font-size: 16px;
+        }
+        /*p는 우선순위가 제일 낮음 
+        
+        ★ tag -> class -> id -> 인라인스타일 -> !important ★ */
+        p{    
+            color: orange;
+        }
+        /*만약 스타일이 두개면 현재 태그와 더 가까운 스타일이 적용됨*/
+        /*!important : 강제로 우선순위를 높여줌 (인라인 스타일 보다 우선순위가 먼저 적용됨)*/
+        p{
+            color: brown !important;
+            font-size: 20px !important;
+        }
+    </style>
+</head>
+<body>
+    <!--태그 뒤에 바로 나오는 스타일은 인라인 스타일이라고 하는데-->
+    <!--동일한 조건 적용시 태그와 가장 가까운 스타일이 적용된다. 인라인 스타일이 가장 태그와 가깝기 때문에
+    인라인 스타일이 적용된 모습-->
+    <p id="first" class="second" style="color: pink;"> 첫번째 p</p>
+    <p class="second">두번째 p</p>
+    <p>세번째 p </p>
+
+</body>
+</html>

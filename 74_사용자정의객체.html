@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1{
+            text-align: center;
+        }
+        table{
+           width: 500px;
+           margin: 0 auto;
+           border-collapse: collapse;
+        }
+        table td{
+            text-align: center;
+            padding: 5px 0 ;
+        }        
+        table th{
+            padding: 5px 0 ;
+            background: #f3f3f3;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        //객체는 0개 이상의 요소 또는 속성 (property)과 메소드로 구성된 집합
+        // proprety는 키(key)와 값(value)의 쌍으로 구성됨
+        // 키의 값으로 올 수 있으며 이런 property 는 method 라고 함
+        // 객체값 추출 : 객체이름.키이름 = 객체이름['키이름']
+        // 키이름이 변수에 저장된 경우 : 객체명[변수명] (o), 객체명.변수명(x)
+        //ex) "사람" 객체 생성하기
+        //let person = {
+        //      name : '안준혁',             객체에 값은 ' ' 로 묶어주기
+        //      height : 169                key는 사용하지 않음
+        //      walking : function(){return 10000} // 메소드
+        // }
+        let students =[ 
+            {name : '안준혁', kor : 80, math : 70, eng : 60, avg : function(){
+                return Math.round((this.kor + this.math + this.eng)/3);
+            } },
+            {name : '홍길동', kor : 70, math : 60, eng : 60, avg : function(){
+                return Math.round((this.kor + this.math + this.eng)/3);
+            } },
+            {name : '이순신', kor : 60, math : 50, eng : 50, avg : function(){
+                return Math.round((this.kor + this.math + this.eng)/3);
+            } },
+            {name : '이상혁', kor : 60, math : 50, eng : 50, avg : function(){
+                return Math.round((this.kor + this.math + this.eng)/3);
+            } },
+            {name : '이세돌', kor : 60, math : 50, eng : 50, avg : function(){
+                return Math.round((this.kor + this.math + this.eng)/3);
+            } }
+        ];
+
+        // students[0].name = "김길동"; //이런식으로 수정이 가능함
+        // document.write(students[0].name +"<br>");
+        // document.write(students[0].kor +"<br>");
+        // document.write(students[0].math +"<br>");
+        // document.write(students[0].eng +"<br>");
+
+        let data = ""
+        data +="<h1>성적표</h1>";
+        data +="<table border='1'>";
+        data +="<tr>";
+        data +="<th>이름</th>";
+        data +="<th>국어</th>";
+        data +="<th>수학</th>";
+        data +="<th>영어</th>";
+        data +="<th>평균</th>";
+        data +="</tr>";
+
+           let avg= 0;
+           for(let i in students){
+           avg = Math.round((students[i].kor + students[i].math + students[i].eng) / 3);
+            data +="<tr>"
+                data+=`<td>${students[i]["name"]}</td>`; //점을 찍지 않고 대괄호를 열어 따옴표로 표시 가능
+                data+=`<td>${students[i].kor}</td>`;       //객체이름.키이름 = 객체이름["키이름"]
+                data+=`<td>${students[i].math}</td>`;   
+                data+=`<td>${students[i].eng}</td>`;
+                data+=`<td>${students[i].avg()}</td>`;
+                // data+=`<td>${avg}</td>`;
+            data +="</tr>";
+        }
+        data+="</table>"
+        document.write(data);
+                                                        // *let = abc*      객체이름.abc [x]
+                                                        //                  객체이름[abc] [o]
+        
+
+    </script>
+</body>
+</html>

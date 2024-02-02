@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1증가하거나 1 감소할 때 사용하는 ++, --</title>
+</head>
+<body>
+    <script>
+        let number1 = 10;
+        let number2 = 20;
+        number1++; // number1 = number1 + 1;
+        document.write(number1);
+        document.write("<br>");
+
+        let result = number2++; // ++을 뒤에 붙이면 앞에 있는 수식어를 먼저만든 후 ++가 붙은걸 개선
+        //let result = number2
+        //number2 =number2 + 1
+        document.write(result +"<br>" ); // 결과 20
+        document.write(number2 + "<br>"); // 결과 21
+        
+        result = --number2;
+        // numner2 = number2 - 1
+        //result = number2
+        document.write(result +"<br>"); // 결과 20
+        document.write(number2 + "<br>");// 결과 20
+    </script>
+</body>
+</html>

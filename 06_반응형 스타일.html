@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@media 미디어쿼리 반응형 스타일 구현하지</title>
+    <style>
+        h1{
+            background: red;
+            color: #fff;
+        }
+        @media screen and (max-width: 1023px){
+            h1{
+                background: pink;
+                /*글자색은 크기가 작아져도 적지 않은 color는 자동 상속 됨*/
+                color: #000;
+            }
+        }
+        @media screen and (max-width: 767px){
+            h1{
+                background: green;
+
+            }
+        }
+        /*항상 크기순으로 배치를 해야함 만약 그렇게 배치하지 않는다면 오류가 남*/
+    </style>
+</head>
+<body>
+    <!--
+        미디어 쿼리
+        @media 미디어 타입 (screen,tv,print) nad (미디어 크기) { }
+        디바이스 별 분기점
+        1. 낮은 해상도의 pc, 태블릿 가로 : 1024px 이상
+        2. 태블릿 가로 :768px ~ 1023px
+        3. 모바일 가로 : 480px ~ 767px
+        4. 모바일 : 479px 이하 
+
+        default화면이 제일 작은 모바일인 경우 (크기순서대로 코딩)
+        1. 모바일은 @media 를 사용하지 않음
+        2. @media screen and (min-width: 480px){ }
+        3. @media screen and (min-width: 768px){ }
+        4. @media screen and (min-width: 1024px){ }  
+
+        default화면이 제일 큰 PC인 경우 (크기순서대로 코딩)
+         1. PC화면은  @media 를 사용하지 않음
+        2. @media screen and (max-width: 1023px){ }
+        3. @media screen and (max-width: 767px){ }
+        4. @media screen and (max-width: 479px){ } 
+    -->
+    <h1>An Jun Hyeok</h1>
+</body>
+</html>

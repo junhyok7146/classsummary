@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css transform 속성</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            margin: 100px;
+        }
+        .box1{
+            border: 3px solid #f00;
+            /* transform: translateX(500px); */
+            /* transform: translateY(500px); */
+            /* transform: translate(300px, 300px ); */
+            /*이런 경우 앞이 x축 뒤가 y축*/
+            /* position: absolute;
+            top: 300px;
+            left: 300px; */
+            /*position속성은 주변에 영향을 끼쳐서 빈 자리로 다른 클래스가 이동가능*/
+            transition: all 0.5s;
+            /*transform은 변화가 발생해도 주변에 영향을 미치지 않아음
+            hover를 사용할 때 자주 사용함 (옆에 영향을 끼치지 않아 밀어내지 않아서)*/
+        }
+        .box2{
+            border: 3px solid #00f;
+        }
+        .box1:hover{
+            /* transform: translate(300px, 300px); */
+            /* transform: rotateZ(-180deg); */
+            /* transform: skewX(-45deg); */
+            /* transform: scale(1.2); */
+            /* transform: translate(300px) rotateZ(45deg) skewX(45deg)  scale(0.3); */
+            /* transform: translate(300px) rotate(9turn) scale(0.3); */
+            transform: rotate(-45deg);
+            transform-origin: right top;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        이동(translate), 회전(rotae), 크기(scale), 비틀기(skew)
+
+        x축 이동 => transform : translateX(50px)
+        y축 이동 => transform : translateY(50px)
+        x,y축 이동=> transform : translate(50px, 50px)
+
+        x축 회전 => transform : rotateX(90deg) 단위가 deg
+        y축 회전 => transform : rotateY(90deg)
+        z축 회전 => transform : rotateZ(90deg)
+        회전의 기준점 => transform-origin : lrft top
+
+        x축 비틀기 => transform : skewX(45deg)단위가 deg
+        y축 비틀기 => transform : skewY(45deg)\
+        
+        X축 크기 => transform : scaleX(1.2)
+        y축 크기 => transform : scaleY(1.2)
+        z축 크기 => transform : scaleZ(1.2)
+    -->
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            margin: 100px;
+            
+        }
+        .box1{
+            background: red;
+            transform: translate(0px);
+            animation: ani1 3s 1 both;
+            /*부여하고 싶은 애니메이션 효과  시간 무한반복*/
+        }
+        .box1:hover{
+            animation-play-state: paused;
+        }
+        .box2{
+            background: green;
+            animation: ani2 2s 1 alternate 1s both;
+            /* 시간을 두개 입력 했을 경우 자동으로 앞에 있는게 진행시간 뒤에있는게 대기 시간
+            숫자가 많으면 단위에 따라 움직임*/ 
+        }
+        .box1:hover{
+            animation-play-state: paused;
+        }
+        @keyframes ani1{
+            0%{ background: red;}
+            25%{background: blue;}
+            50%{background: yellow;}
+            100%{transform: translate(300px);}
+        }
+        @keyframes ani2{
+            0%{transform: translate(0px, 0px);}
+            25%{transform: translate(100px, 0px);}
+            50%{transform: translate(100px, 100px);}
+            75%{transform: translate(0px, 100px);}
+
+        }
+    </style>
+</head>
+<body>
+    <!--
+        animation : @keyframes 뒤에 있는 이름
+        animation-duration : 진행시간
+        animation-iteration-count : 반복횟수 (1, infinite)
+        animation-direction : 진행방향 (nomal, reverse(역방향), alternate (왔다리 갔다리))
+        animation-delay : 대기시간(1s)
+        animation-timing-function : 가속도 함수 (ease, liner,)
+        animation-fill-mode : 애니메이션 종료 후 상태(backwards)
+        animation-play-state : 
+    -->
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+</body>
+</html>

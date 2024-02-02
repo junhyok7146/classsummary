@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       // let number = new Number(273);
+       //                     객체(숫자) : 기본자료형은 자동으로 객체자료형으로 변환
+        let number = 273.5210332;
+        //toFixed(소수점이하 자릿수) : 소숫점 이하 자릿수만큼 출력
+        document.write(number.toFixed(1) + "<br>"); // 273.5
+        //                    toFixed(소숫점 첫번째자리)
+        document.write(number.toFixed(4) + "<br>"); // 273.5210
+        //                    toFixed(소숫점 네번째 자리 "까지")                
+
+        //parseInt(데이터) : 정수만 출력
+        //데이터 : "275점", 273.5210332 (parseInt는 따옴표, 점, 글자 모두 출력이 안된다.)
+        // 즉 *) "275점" = 275        *) 273.5210332 = 273     
+        let score = parseInt(prompt("점수를 입력하세요.", " "))  
+                           //prompt창에서 "80점"이라고 적어도 80으로 출력됨         
+        document.write(score+ "<br>"); // 273
+        //             parseInt(소숫점이 있어도 정수만 나옴) 
+    </script>
+</body>
+</html>

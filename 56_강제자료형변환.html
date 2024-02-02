@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        let number1 = prompt("숫자를 입력하세요.", "");
+        let number2 = prompt("숫자를 입력하세요.", "");
+        document.write(Number(number1) + Number(number2) + "<br>");
+
+        document.write(typeof number1 + "<br>");
+        let number3 = 100;
+        let number4 = 200;
+        let number5 = 0;
+        let number6 = number4 / number5;
+        let string1 = "안준혁";
+        let string2 = ""; //null과 동일함
+        let string3 = null; //빈 값
+        let string4;
+        document.write(String(number3) + String(number4) + "<br>");
+        document.write(Boolean(number3) + "<br>"); //true
+        document.write(Boolean(number5) + "<br>"); //false
+        document.write(Boolean(number6) + "<br>"); //true
+        document.write(Boolean(string1) + "<br>"); // true
+        document.write(Boolean(string2) + "<br>"); // false
+        document.write(Boolean(string3) + "<br>"); //false
+        document.write(string4 + "<br>"); //undefined = 정의되지않았다.
+        document.write(Boolean(string4) + "<br>"); //false
+        document.write(Number(string1) + "<br>"); // NaN =Not a Number, 숫자가 아닌데 숫자로 정의하려고 하면 나오는 값 = false  
+        
+        let hours = (new Data()).getHours();
+        document.write(hours);
+    </script>
+</body>
+</html>

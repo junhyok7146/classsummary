@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //콜백함수 : 함수의 인수로 사용되는 함수
+        function callTenTimes(min, max, callback){
+            let output= 0;
+            for (let i =min; i<max; i++){
+                // callback(); //콜백함수 호출문
+                output += i
+            }
+            document.write(output + "<br>")
+            callback(output)
+            };
+        callTenTimes(1, 10, function(result){
+            document.write(result + "<br>")
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let now = new Date();
+        document.write(now + "<br>")
+
+        //연도 : get
+        document.write(now.getFullYear()+"<br>")
+
+        //월 : getMonth()
+        document.write(now.getMonth()+ 1 + "<br>")
+
+        //요일 
+        document.write(now.getDate()+"<br>")
+        // 일
+        document.write(now.getDay()+"<br>")
+        //시간 : getHour
+        document.write(now.getHour()+"<br>")
+        // 분 : getMinuses
+        document.write(now.getMinuses()+"<br>")
+        //초 getSeconds
+        document.write(now.getSeconds()+"<br>")
+         
+        
+        
+        //setInterval(함수,ms) : ms간격으로 함수를 반복적으로 실행
+        setInterval(function(){
+            switch(day){
+            case 0 : day ="일요일"; break;
+            case 1 : day ="월요일"; break;
+            case 2 : day ="화요일"; break;
+            case 3 : day ="수요일"; break;
+            case 4 : day ="목요일"; break;
+            case 5 : day ="금요일"; break;
+            case 6 : day ="토요일"; break;
+        }
+
+        let year = today.getFullYear();
+        let month = today.getMonth();
+        let date = today.getDate();
+        let day = today.getDay();
+        let hours = today.getHours();
+        let minutes = today.getMinutes();
+        let seconds = today.getSeconds();
+        })
+        let today = new Date();
+        
+
+        document.write(`${year}년 ${month}월 ${date}일 ${day} ${hour}시 ${minutes}분 ${seconds}초`)
+     
+
+        //경과한 날 수 구하기
+        let birthday = new Date(1996-11-11)
+
+        //getTime() : 1996.11 .11 부터 오늘까지 경과한 ms를 구함
+        let aDate = now.getTime(); 
+        //1996.11.11부터 내 생일까지 경과한 ms를 구함
+        let bDate = birthday.getTime();
+        let survival = (((((aDate - bDate)/1000)/60)/60)/24)/365;
+        document.write(survival +"일 <br>")
+     
+     </script>
+</body>
+</html>

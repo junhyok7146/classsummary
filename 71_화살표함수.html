@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 일반함수 vs 화살표함수
+
+        //일반함수
+        function power1(){
+            document.write("나는 일반함수야 <br>")
+        }
+        power1()
+
+        //화살표 함수
+        //실행문이 하나일때는 {  }  생략 가능
+        //하나인 실행문이 return문일때 return도 생략가능
+        //매개변수가 하나일 때 만 ( ) 생략 가능
+        let power2 = number => number * number //화살표 함수는 익명함수처럼 변수에 담아서 사용해야함        
+        document.write(power2 (2) + "<br>");
+        //화살표 함수는 익명함수 개념이다 그런의미에서 호이스팅이 불가능함
+    </script>
+</body>
+</html>

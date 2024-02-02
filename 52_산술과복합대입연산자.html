@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>산술연산자</title>
+</head>
+<body>
+
+
+
+    <script>
+        let number1 = 10;
+        let number2 = 20;
+        document.write(number1+number2 + "<br>"); // 더하기 30
+        document.write(number1-number2 + "<br>"); // 빼기 -10
+        document.write(number1*number2 + "<br>"); // 곱하기 200
+        document.write(number1/number2 + "<br>"); // 나눗셈 0.5
+        document.write(number1%number2 + "<br>"); // 나머지  10
+        
+        let result = number1 + number2 - number1 % number2 * number1 / number2; // 사칙연산 적용
+        document.write(result + "<br>");
+
+        document.write(number1 + "10" + number2 + "<br>");
+        // document안에 숫자를 적을 시 문자로 치환, 연산이 안되고 101020으로 표기됨
+        
+        document.write(number1 + number2 + "10" + "<br>");
+        // 기호를 먼저사용시 순서대로 덧셈이 먼저 계산 된 후 문자로 표기되어 3010으로 나옴 
+
+        // 복합대입연산자
+        // += , -= , *= , /= , %= 
+        number1 += 1; // 풀어서 쓰면 number1 = number 1 + 1; 결과 11
+        document.write(number1 + "<br>");
+        number1 -=2; //number1 = number1 - 2; 결과 9
+        document.write(number1 + "<br>");
+        number1 *= 3; // number1 = number1 * 3; 결과 27
+        document.write(number1 + "<br>");
+        number1 /= 4; // number1 = number1 / 4; 결과 6.75
+        document.write(number1 + "<br>");
+        number1 %= 5; //number1 = number1 % 5; 결과 1.75
+        document.write(number1 + "<br>")
+
+        let list = "<ul>";
+                list += "<li>리스트1</li>";
+                list += "<li>리스트2</li>";
+                list += "<li>리스트3</li>";
+            list += "</ul>" ;
+            document.write(list);
+    </script>
+</body>
+</html>

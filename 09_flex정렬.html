@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           /*studiomeal.com 속성을 알려주는 사이트*/
+           /*https://studiomeal.com/archives/197*/
+        }
+        .parent{
+            background: pink;
+            height: 400px;
+            width: 600px;
+            
+            display: flex;
+            justify-content:left;
+            align-content: space-between;
+            /*
+            flex-wrap:wrap; 으로 여러줄 정렬일 때는 세로정렬을
+            align-items가 아닌 align-content 속성을 사용한다.
+            
+            flex-wrap:nowrap (기본값)으로 한줄 정렬 일 때 세로정렬은
+            align-items속성을 사용할 것
+            */
+            flex-wrap: wrap;
+            flex-direction: row;
+            /*
+            기번 방향은 수평방향 (row)
+
+            flex-direction과 flex-wrap을 flex-flow 속성으로 합칠 수 있음
+            ex) flex-flow : row wrap;
+                flex-flow : column nowrap;
+            */
+        }
+        /*
+        가로정렬 justify-content : flex-start => 왼쪽끝 정렬
+        justify-content : flex-end => 오른쪽끝 정렬
+        세로정렬 align-item : staretch => 부모한테 맞춰짐
+
+         */
+        .child{
+            padding: 30px 0 ;
+
+            border: 1px solid #000;
+            /* 부모의 빈 공간을 자식들이 다 차지하는 속성 */
+            
+            /* flex-grow : 1 (부모의 빈공간을 확장하여 채움)
+               flex-grow : 0 (빈공간이 유지 됨) *기본값은 0이다. 
+               flex-shirink : 1 (부모의 넘치는 공간을 자식이 축소되어 채움 기본값1)
+               flex-basis : 0 (자식의 넓이값을 주는)기본값 0 
+                flex-wrap : wrap (자식들을 두줄로 정렬 시키는 공식) 기본값 nowrap
+             */
+            flex: 0 1 25%; /*=flex:1 => flex1 shirinnk와 basis가 생략이 되는것 디폴트값이 0임*/
+
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+            <div class="child child1">자식1</div>
+            <div class="child child2">자식2</div>
+            <div class="child child3">자식3</div>
+            <div class="child child4">자식4</div>
+            <div class="child child5">자식5</div>
+            <div class="child child6">자식6</div>
+    </div>
+</body>
+</html>
